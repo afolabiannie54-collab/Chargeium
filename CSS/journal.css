@@ -1,0 +1,96 @@
+/* General page styles */
+body {
+  background: #fafafa;
+  font-family: "DM Sans", sans-serif;
+  color: #222;
+}
+
+/* Intro section */
+.journal-intro {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+}
+
+.journal-intro h1 {
+  font-family: "DM Serif Text", serif;
+  font-size: 2.2rem;
+}
+
+.journal-intro p {
+  color: #555;
+  max-width: 600px;
+  margin: 0.5rem auto 2rem;
+  line-height: 1.6;
+}
+
+/* Grid container */
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px; /* tight collage vibe */
+  padding: 2rem 3rem;
+}
+
+/* Journal items */
+.journal-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Remove rounded corners for magazine feel */
+.journal-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  border-radius: 0; /* sharp edges */
+}
+
+/* Hover fade effect */
+.journal-image-wrapper {
+  position: relative;
+}
+
+.hover-img {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.journal-image-wrapper:hover .hover-img {
+  opacity: 1;
+}
+
+.journal-image-wrapper:hover .main-img {
+  opacity: 0;
+  transform: scale(1.03); /* subtle zoom */
+}
+
+/* Caption */
+.caption {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 2px; /* small radius for slight separation */
+}
+
+/* Optional: add variety to collage height */
+.journal-item:nth-child(3n) img {
+  height: 350px;
+  object-fit: cover;
+}
+
+.journal-item:nth-child(5n) img {
+  height: 450px;
+  object-fit: cover;
+}
+
+.journal-item:nth-child(7n) img {
+  height: 400px;
+  object-fit: cover;
+}

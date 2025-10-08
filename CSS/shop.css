@@ -1,0 +1,188 @@
+/* shop.css */
+
+:root {
+  /* Typography */
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font: sans-serif;
+
+  /* Font Sizes */
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.25rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2rem;
+  --fs-xxl: 3rem;
+  --fs-ll: 10rem;
+
+  /* Colors */
+  --clr-bg: #0d0d0d;
+  --clr-text: #f5f5f5;
+  --clr-primary: #1b1a1b;
+  --clr-accent: #94f0f1;
+  --clr-muted: #999999;
+  --clr-border: #1f1f1f;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+
+  border: 1px solid #000;
+  font-size: 16px;
+  font-family: DM Sans, sans-serif;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  text-align: center;
+}
+
+#search-input:focus {
+  outline: none;
+  border-color: #777;
+}
+
+.product-details {
+  /* border: 2px solid blue; */
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.product-image {
+  /* border: 2px solid green; */
+  width: 40%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  /* overflow: hidden; */
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 4rem;
+  align-self: flex-start;
+
+  gap: 1rem;
+}
+
+.product-details h1 {
+  font-weight: normal;
+  font-family: sans-serif;
+  font-size: clamp(5rem, 4vw, 2rem);
+}
+
+.product-details .price {
+  font-size: clamp(2rem, 2vw, 1rem);
+  font-family: DM Sans, sans-serif;
+  line-height: 1.5;
+}
+
+.product-details button {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  font-family: DM Sans, sans-serif;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-details button:hover {
+  transition: all 0.6s ease;
+  background-color: var(--clr-muted);
+  color: black;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-family: DM Sans, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+select:focus {
+  outline: none;
+  border-color: #777;
+}
+
+option:hover {
+  background-color: #2d3030;
+}
+
+.related-products {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.related-products h2 {
+  font-size: clamp(2rem, 7vw, 4rem);
+  font-weight: normal;
+  margin-bottom: 1rem;
+  font-family: sans-serif;
+}
+
+.no-products {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 0;
+  font-size: 1.1rem;
+  color: #777;
+}
+
+@media (max-width: 1024px) {
+  .product-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-image,
+  .product-info {
+    width: 100%;
+  }
+
+  .product-info {
+    position: static; /* remove sticky on small screens */
+    top: auto;
+    margin-top: 1.5rem;
+  }
+
+  .product-details h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    text-align: center;
+  }
+
+  .product-details .price {
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    text-align: center;
+  }
+
+  .product-details button {
+    width: 100%;
+  }
+}

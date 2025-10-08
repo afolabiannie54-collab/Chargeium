@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Chargeium - Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../CSS/index.css" />
+    <link rel="stylesheet" href="../CSS/cart.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../JS/main.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div class="logo"><h3>CHARGEIUM</h3></div>
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="navlinks" data-visible="false">
+          <a href="index.html">HOME</a>
+          <a href="shop.html">SHOP</a>
+          <a href="about.html">ABOUT</a>
+          <a href="journal.html">JOURNAL</a>
+        </div>
+        <div class="navicons">
+          <a href="search.html" aria-label="Search site">
+            <i class="fa-solid fa-search"></i>
+          </a>
+          <a href="cart.html" class="navicon carticon active">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+          </a>
+          <a href="login.html" class="navicon" aria-label="User account">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="cart-page">
+      <h1>THESE ARE YOURS (ALMOST)</h1>
+      <div class="cart-wrapper">
+        <section class="cart-container">
+          <div class="cart-items" id="cart-items">
+            <!-- JS will populate cart items here -->
+          </div>
+          <div class="cart-summary">
+            <h2>Order Summary</h2>
+            <p>Total Items: <span id="cart-totalitems">0</span></p>
+            <p>Total Price: ₦<span id="cart-total">0</span></p>
+            <button class="checkout-btn">Checkout</button>
+          </div>
+        </section>
+      </div>
+      <!-- CHECKOUT MODAL -->
+      <div id="checkout-modal" class="checkout-modal">
+        <div class="checkout-modal-content">
+          <span id="closeCheckoutModal" class="close-modal">&times;</span>
+          <h2>Complete Your Order</h2>
+          <form id="checkoutForm" autocomplete="off">
+            <label>Full Name</label>
+            <input
+              type="text"
+              id="checkout-name"
+              placeholder="John Doe"
+              required
+            />
+
+            <label>Email</label>
+            <input
+              type="email"
+              id="checkout-email"
+              placeholder="john@email.com"
+              required
+            />
+
+            <label>Phone Number</label>
+            <input
+              type="tel"
+              id="checkout-phone"
+              placeholder="+234 000 000 0000"
+              required
+            />
+
+            <label>Address</label>
+            <textarea
+              id="checkout-address"
+              placeholder="Delivery Address"
+              required
+            ></textarea>
+
+            <h3>Payment Details</h3>
+            <input
+              type="text"
+              id="checkout-card"
+              placeholder="Card Number"
+              required
+            />
+            <input
+              type="text"
+              id="checkout-expiry"
+              placeholder="MM/YY"
+              required
+            />
+            <input type="text" id="checkout-cvv" placeholder="CVV" required />
+
+            <button type="submit" class="confirm-checkout">
+              Confirm Order
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <h3>CHARGEIUM</h3>
+          </div>
+          <div class="footer-links">
+            <a href="index.html">HOME</a>
+            <a href="shop.html">SHOP</a>
+            <a href="about.html">ABOUT</a>
+            <a href="journal.html">JOURNAL</a>
+          </div>
+          <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a
+              href="https://www.instagram.com/chargeium?igsh=MWh2Mmdyb2ZuOWJ5eA=="
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+          <div class="footer-contact-info">
+            <p>
+              Email:
+              <a href="mailto:support@chargeium.com">support@chargeium.com</a>
+            </p>
+            <p>Phone: +1 234 567 8901</p>
+            <p>123 Fashion Ave, Lagos, Nigeria</p>
+          </div>
+        </div>
+        <div class="footer-right">
+          <form
+            class="footer-contact-form"
+            id="footerContactForm"
+            autocomplete="off"
+          >
+            <h4>Contact Us</h4>
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit">Send</button>
+            <div
+              class="footer-form-thankyou"
+              id="footerFormThankYou"
+              style="display: none"
+            >
+              Thank you! We’ll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+      <p>&copy; 2025 Chargeium. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="../JS/cart.js"></script>
+    <script src="../JS/auth.js " type="module"></script>
+  </body>
+</html>
