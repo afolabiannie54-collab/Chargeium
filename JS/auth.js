@@ -158,7 +158,7 @@ if (signupForm) {
     updateNavbarAuth();
     flashMessage("Account created — welcome!", "success");
 
-    setTimeout(() => (window.location.href = "../index.html"), 700);
+    setTimeout(() => (window.location.href = "index.html"), 700);
   });
 }
 
@@ -205,7 +205,7 @@ if (loginForm) {
     setCurrentUser({ name: user.name, email: user.email });
     updateNavbarAuth();
     flashMessage(`Welcome back, ${user.name.split(" ")[0]}!`, "success");
-    setTimeout(() => (window.location.href = "../index.html"), 700);
+    setTimeout(() => (window.location.href = "index.html"), 700);
   });
 }
 
@@ -215,7 +215,7 @@ if (existingLogoutBtn) {
     e.preventDefault();
     clearCurrentUser();
     updateNavbarAuth();
-    window.location.href = "../index.html";
+    window.location.href = "index.html";
   });
 }
 

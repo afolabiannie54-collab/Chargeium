@@ -6,9 +6,9 @@
     <title>Chargeium</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script src="JS/main.js" defer></script>
+    <script src="../JS/main.js" defer></script>
     <script type="module">
-      import { getCurrentUser } from "JS/auth.js";
+      import { getCurrentUser } from "../JS/auth.js";
       if (getCurrentUser()) {
         window.location.href = "profile.html";
       }
@@ -17,10 +17,10 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="CSS/index.css"
+      href="../CSS/index.css"
     />
 
-    <link rel="stylesheet" href="CSS/auth.css" />
+    <link rel="stylesheet" href="../CSS/auth.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -97,8 +97,8 @@
         <p>Already have an account? <a href="login.html">Login here</a></p>
       </div>
     </main>
-    <script src="JS/auth.js" type="module"></script>
+    <script src="../JS/auth.js" type="module"></script>
 
-    <script type="module" src="JS/products.js"></script>
+    <script type="module" src="../JS/products.js"></script>
   </body>
 </html>

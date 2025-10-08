@@ -48,6 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Logout
   document.getElementById("logoutBtn").addEventListener("click", () => {
     localStorage.removeItem("currentUser");
-    window.location.href = "../index.html";
+    window.location.href = "index.html";
   });
 });
