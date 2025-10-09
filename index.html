@@ -6,15 +6,15 @@
     <title>Chargeium</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script src="../JS/main.js" defer></script>
+    <script src="JS/main.js" defer></script>
 
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="../CSS/index.css"
+      href="CSS/index.css"
     />
-    <link rel="stylesheet" href="../CSS/hover.css" />
+    <link rel="stylesheet" href="CSS/hover.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,24 +46,24 @@
         </button>
         <div class="navlinks" data-visible="false">
           <a href="index.html" class="active">HOME</a>
-          <a href="shop.html">SHOP</a>
-          <a href="about.html">ABOUT</a>
-          <a href="journal.html">JOURNAL</a>
+          <a href="HTML/shop.html">SHOP</a>
+          <a href="HTML/about.html">ABOUT</a>
+          <a href="HTML/journal.html">JOURNAL</a>
         </div>
 
         <div class="navicons">
-          <a href="search.html" aria-label="Search site">
+          <a href="HTML/search.html" aria-label="Search site">
             <i class="fa-solid fa-search"></i>
           </a>
           <a
-            href="cart.html"
+            href="HTML/cart.html"
             class="navicon carticon"
             aria-label="View shopping cart"
           >
             <i class="fa-solid fa-cart-shopping"></i>
             <span id="cart-count">0</span>
           </a>
-          <a href="login.html" class="navicon" aria-label="User account">
+          <a href="HTML/login.html" class="navicon" aria-label="User account">
             <i class="fa-solid fa-user"></i>
           </a>
         </div>
@@ -78,14 +78,18 @@
             Designs that move with you, shaping presence into statement. More
             than fashion, this is energy you can wear.
           </p>
-          <a href="shop.html" class="btn btn-primary hvr-sweep-to-top">
+          <a href="HTML/shop.html" class="btn btn-primary hvr-sweep-to-top">
             SHOP NOW
           </a>
-          <a class="btn btn-secondary hvr-sweep-to-bottom">EXPLORE</a>
+          <a
+            class="btn btn-secondary hvr-sweep-to-bottom"
+            href="HTML/journal.html"
+            >EXPLORE</a
+          >
         </div>
         <div class="heroimgs" data-aos="fade-left" data-aos-duration="1500">
           <img
-            src="../assets/ayo-ogunseinde-UqT55tGBqzI-unsplash.jpg"
+            src="assets/ayo-ogunseinde-UqT55tGBqzI-unsplash.jpg"
             alt="Model wearing Chargeium fashion piece"
             width="673"
             height="1000"
@@ -102,9 +106,9 @@
         >
           <div class="collection-flex">
             <div class="collection-item">
-              <a href="shop.html?gender=men">
+              <a href="HTML/shop.html?gender=men">
                 <img
-                  src="../assets/harrison-hargrave-Oa82qqFjMd4-unsplash.jpg"
+                  src="assets/harrison-hargrave-Oa82qqFjMd4-unsplash.jpg"
                   alt="Men's Collection clothing display"
                   width="800"
                   height="1000"
@@ -115,9 +119,9 @@
               <h3>Men</h3>
             </div>
             <div class="collection-item">
-              <a href="shop.html?gender=women">
+              <a href="HTML/shop.html?gender=women">
                 <img
-                  src="../assets/thatselby-oMEdjpplFnk-unsplash.jpg"
+                  src="assets/thatselby-oMEdjpplFnk-unsplash.jpg"
                   alt="Women's Collection fashion showcase"
                   width="800"
                   height="1000"
@@ -127,9 +131,9 @@
               <h3>Women</h3>
             </div>
             <div class="collection-item">
-              <a href="journal.html">
+              <a href="HTML/journal.html">
                 <img
-                  src="../assets/faune-magazine-DQP03Vq78Z4-unsplash.jpg"
+                  src="assets/faune-magazine-DQP03Vq78Z4-unsplash.jpg"
                   alt="Chargeium journal cover photo"
                   width="800"
                   height="1000"
@@ -150,7 +154,7 @@
           <br />
           Chargeium is not just about fashion, it’s about making a statement.
         </p>
-        <a href="about.html">
+        <a href="HTML/about.html">
           <button class="btn btn-primary">
             <span>READ THE BRAND STORY</span>
           </button>
@@ -171,9 +175,9 @@
           </div>
           <div class="footer-links">
             <a href="index.html">HOME</a>
-            <a href="shop.html">SHOP</a>
-            <a href="about.html">ABOUT</a>
-            <a href="journal.html">JOURNAL</a>
+            <a href="HTML/shop.html">SHOP</a>
+            <a href="HTML/about.html">ABOUT</a>
+            <a href="HTML/journal.html">JOURNAL</a>
           </div>
           <div class="footer-socials">
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -248,14 +252,14 @@
           <p id="modalConfirmText"></p>
           <div class="modal-actions">
             <button id="continueShopping" class="btn">Continue Shopping</button>
-            <a href="cart.html" class="btn btn-primary">Go to Cart</a>
+            <a href="HTML/cart.html" class="btn btn-primary">Go to Cart</a>
           </div>
         </div>
       </div>
     </div>
 
-    <script type="module" src="../JS/products.js"></script>
-    <script src="../JS/auth.js" type="module"></script>
+    <script type="module" src="JS/products.js"></script>
+    <script src="JS/auth.js" type="module"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
