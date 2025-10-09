@@ -131,6 +131,19 @@ function setupCheckoutModal() {
   if (!modal || !openBtn || !checkoutForm) return;
 
   openBtn.addEventListener("click", () => {
+    const user = JSON.parse(localStorage.getItem("currentUser"));
+    if (!user) {
+      flashMessage("Please log in to complete checkout.", "error");
+      setTimeout(() => (window.location.href = "login.html"), 1200);
+      return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    const userIndex = users.findIndex((u) => u.email === user.email);
+    if (userIndex === -1) {
+      flashMessage("User not found.", "error");
+      return;
+    }
     if (cart.length === 0) {
       flashMessage("Your cart is empty.", "error");
       return;
