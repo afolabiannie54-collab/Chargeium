@@ -81,7 +81,7 @@ function updateNavbarAuth() {
     window.location.pathname === "/index";
 
   if (current) {
-    const profileLink = onIndex ? "html/profile.html" : "profile.html";
+    const profileLink = onIndex ? "HTML/profile.html" : "profile.html";
     userAnchor.setAttribute("href", profileLink);
     userAnchor.classList.add("auth-user");
     userAnchor.innerHTML = `

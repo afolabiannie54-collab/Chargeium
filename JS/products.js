@@ -52,7 +52,7 @@ function renderProducts(productList, container, showViewButton = true) {
         </button>
          ${
            showViewButton
-             ? `<a href="${onIndex ? "html/" : ""}product.html?id=${
+             ? `<a href="${onIndex ? "HTML/" : ""}product.html?id=${
                  product.id
                }" class="btn btn-secondary">VIEW PRODUCT</a>`
              : ""
