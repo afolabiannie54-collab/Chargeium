@@ -7,7 +7,7 @@ export const products = [
     sizes: ["S", "M", "L", "XL"],
     price: 35000,
     description:
-      "A timeless classic, this t-shirt is perfect for everyday wear.",
+      "Keep it simple, classic, and comfortable. This basic T-shirt is made for everyday wear and built to last. Whether you’re dressing it up with a jacket or keeping it casual with jeans, this tee is the perfect foundation for any look.",
     images: [
       "https://static.zara.net/assets/public/b6ec/6f07/64d44ed29187/664641d79105/03253320800-000-e1/03253320800-000-e1.jpg?ts=1744043155452&w=750",
       "https://static.zara.net/assets/public/2e95/fa22/9b904fdc9811/cfa1a659ef7a/03253320800-p/03253320800-p.jpg?ts=1737041097392&w=1024",
@@ -22,7 +22,7 @@ export const products = [
     sizes: ["S", "M", "L", "XL"],
     price: 35000,
     description:
-      "A wardrobe essential, this t-shirt offers both style and comfort.",
+      "Keep it simple, classic, and comfortable. This basic T-shirt is made for everyday wear and built to last. Whether you’re dressing it up with a jacket or keeping it casual with jeans, this tee is the perfect foundation for any look.",
     images: [
       "https://static.zara.net/assets/public/a9a7/d5dc/507142b2b911/ab1be9dabaee/03253320250-000-e1/03253320250-000-e1.jpg?ts=1740137434696&w=2160",
       "https://static.zara.net/assets/public/dbfd/5373/46424378af04/5214680a56d0/03253320803-a1/03253320803-a1.jpg?ts=1758879425826&w=1125",
@@ -36,7 +36,8 @@ export const products = [
     gender: "women",
     sizes: ["S", "M", "L"],
     price: 35000,
-    description: "A versatile t-shirt that pairs well with any outfit.",
+    description:
+      "Keep it simple, classic, and comfortable. This basic T-shirt is made for everyday wear and built to last. Whether you’re dressing it up with a jacket or keeping it casual with jeans, this tee is the perfect foundation for any look.",
     images: [
       "https://static.zara.net/assets/public/e13f/4992/fe31490b80b0/4d92a2636ad9/03253320700-e1/03253320700-e1.jpg?ts=1741693045512&w=750",
       "https://static.zara.net/assets/public/ba8d/f864/b3f54855a6d1/6d5189857fe9/03253320700-p/03253320700-p.jpg?ts=1754043674093&w=1024",
@@ -299,7 +300,7 @@ export const products = [
     sizes: ["S", "M", "L", "XL"],
     price: 60000,
     description:
-      "Polo shirt made of 100% cotton knit fabric. V-neck. Short sleeves. Textured fabric.",
+      "Polo shirt made of 100% cotton knit fabric. V-neck. Short sleeves. Textured fabric. Made for everyday wear and built to last.",
     images: [
       "https://static.massimodutti.net/assets/public/771f/5a8a/d57e4113a179/aa88369ae87f/00910201406-o1/00910201406-o1.jpg?ts=1753351474634&w=850&f=auto",
       "https://static.massimodutti.net/assets/public/4fdd/7a44/500d49bca4b7/464b5ace9906/00910201406-o6/00910201406-o6.jpg?ts=1756982889865&w=1920&f=auto",
@@ -326,7 +327,7 @@ export const products = [
   {
     id: 23,
     name: "classic t-shirt",
-    category: "tshirt",
+    category: "tshirts",
     gender: "men",
     sizes: ["S", "M", "L", "XL"],
     price: 50000,

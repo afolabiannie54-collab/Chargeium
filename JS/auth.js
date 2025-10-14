@@ -75,9 +75,14 @@ function updateNavbarAuth() {
   if (!userAnchor) return;
 
   const current = getCurrentUser();
+  const onIndex =
+    window.location.pathname.endsWith("index.html") ||
+    window.location.pathname === "/" ||
+    window.location.pathname === "/index";
 
   if (current) {
-    userAnchor.setAttribute("href", "profile.html");
+    const profileLink = onIndex ? "html/profile.html" : "profile.html";
+    userAnchor.setAttribute("href", profileLink);
     userAnchor.classList.add("auth-user");
     userAnchor.innerHTML = `
       <span class="nav-user">Hi, ${escapeHtml(
@@ -86,9 +91,10 @@ function updateNavbarAuth() {
       <i class="fa-solid fa-user"></i>
     `;
   } else {
+    const loginLink = onIndex ? "HTML/login.html" : "login.html";
     userAnchor.classList.remove("auth-user");
     userAnchor.innerHTML = `<i class="fa-solid fa-user"></i>`;
-    userAnchor.setAttribute("href", "login.html");
+    userAnchor.setAttribute("href", loginLink);
   }
 }
 function escapeHtml(unsafe) {

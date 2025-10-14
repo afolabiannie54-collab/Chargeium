@@ -11,20 +11,30 @@ const featuredProducts = products.slice(0, 12);
 function renderProducts(productList, container, showViewButton = true) {
   if (!container) return;
 
+  container.innerHTML = "";
+
   if (productList.length === 0) {
-    grid.innerHTML = `
-      <div class="no-products">
-        <p>No products found.</p>
-      </div>
-    `;
+    const message = document.createElement("div");
+    message.classList.add("no-products");
+    message.textContent = "No products found.";
+    container.appendChild(message);
+
+    container.classList.add("empty-grid");
     return;
   }
+
+  container.classList.remove("empty-grid");
 
   productList.forEach((product) => {
     if (!product.name) return;
 
     const div = document.createElement("div");
     div.classList.add("product");
+
+    const onIndex =
+      window.location.pathname.endsWith("index.html") ||
+      window.location.pathname === "/" ||
+      window.location.pathname === "/index";
 
     div.innerHTML = `
       <img
@@ -40,11 +50,13 @@ function renderProducts(productList, container, showViewButton = true) {
         <button class="btn btn-secondary addtocart" data-id="${product.id}">
           ADD TO CART
         </button>
-        ${
-          showViewButton
-            ? `<a href="product.html?id=${product.id}" class="btn btn-secondary">VIEW PRODUCT</a>`
-            : ""
-        }
+         ${
+           showViewButton
+             ? `<a href="${onIndex ? "html/" : ""}product.html?id=${
+                 product.id
+               }" class="btn btn-secondary">VIEW PRODUCT</a>`
+             : ""
+         }
       </div>
     `;
 
@@ -52,7 +64,7 @@ function renderProducts(productList, container, showViewButton = true) {
   });
 }
 
-renderProducts(featuredProducts, indexGrid, false);
+renderProducts(featuredProducts, indexGrid, true);
 
 renderProducts(products, grid, true);
 

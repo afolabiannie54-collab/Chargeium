@@ -191,18 +191,13 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  position: relative;
 }
 
 .about-text h2 {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-
   font-weight: normal;
   font-size: var(--fs-md);
   position: flex;
+  margin-bottom: 1rem;
 }
 
 .about-text p {
@@ -259,7 +254,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url("https://static.zara.net/assets/public/d765/bb99/fd634df4a0bb/b48bc1857f57/T9871069262-p/T9871069262-p.jpg?ts=1758801154533&w=1024");
+  background-image: url(../assets/ChatGPT\ Image\ Oct\ 14\,\ 2025\,\ 10_22_09\ PM.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

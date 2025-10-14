@@ -347,24 +347,41 @@ nav a:hover {
 }
 
 .productgrid {
-  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  align-items: start;
+  align-items: stretch;
+  gap: 0; /* keep the collage look */
+  justify-content: center;
+  /* min-height: 60vh; */
 }
 
-.product img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.productgrid.empty-grid {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* the no products text */
+.no-products {
+  font-size: 1.1rem;
+  color: var(--clr-dark-gray);
+  text-align: center;
 }
 
 .product {
   position: relative;
   border: 0.6px solid var(--clr-border);
   overflow: hidden;
-  height: auto;
+  height: 100%; /* keep full stretch in the grid cell */
+}
+
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3 / 4; /* standard fashion ratio */
+  display: block;
 }
 
 .productinfo h3 {
