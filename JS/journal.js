@@ -2,7 +2,10 @@ import { products } from "./productdata.js";
 
 const journalGrid = document.getElementById("journalGrid");
 
-products.forEach((product) => {
+// Shuffle the array (Fisher-Yates shuffle)
+const shuffledProducts = [...products].sort(() => Math.random() - 0.5);
+
+shuffledProducts.forEach((product) => {
   const item = document.createElement("div");
   item.classList.add("journal-item");
 
